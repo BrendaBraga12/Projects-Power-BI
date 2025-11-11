@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "c7f6437973ac6a9d35e7",
+  "position": {
+    "x": 0,
+    "y": 78.571428571428569,
+    "z": 5000,
+    "height": 257.14285714285717,
+    "width": 315.71428571428572,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "treemap",
+    "query": {
+      "queryState": {
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data Professional Survey"
+                    }
+                  },
+                  "Property": "Q11 - Which Country do you live in?.1"
+                }
+              },
+              "queryRef": "Data Professional Survey.Q11 - Which Country do you live in?.1",
+              "nativeQueryRef": "Q11 - Which Country do you live in?.1",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Data Professional Survey"
+                        }
+                      },
+                      "Property": "Q11 - Which Country do you live in?.1"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Data Professional Survey.Q11 - Which Country do you live in?.1)",
+              "nativeQueryRef": "Contagem de Q11 - Which Country do you live in?.1"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Country of Survey Takers'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

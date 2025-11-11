@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "524494ffe90574d675bc",
+  "position": {
+    "x": 331.42857142857144,
+    "y": 81.428571428571431,
+    "z": 3000,
+    "height": 357.14285714285717,
+    "width": 498.57142857142861,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data Professional Survey"
+                    }
+                  },
+                  "Property": "Q1 - Which Title Best Fits your Current Role?.1"
+                }
+              },
+              "queryRef": "Data Professional Survey.Q1 - Which Title Best Fits your Current Role?.1",
+              "nativeQueryRef": "Job Title",
+              "active": true,
+              "displayName": "Job Title"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data Professional Survey"
+                    }
+                  },
+                  "Property": "Q1 - Which Title Best Fits your Current Role?.1"
+                }
+              },
+              "queryRef": "Data Professional Survey.Q1 - Which Title Best Fits your Current Role?.1",
+              "nativeQueryRef": "Job Title",
+              "displayName": "Job Title"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Data Professional Survey"
+                        }
+                      },
+                      "Property": "Average Salary.1"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(Data Professional Survey.Average Salary.1)",
+              "nativeQueryRef": " Average Salary",
+              "displayName": " Average Salary"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Data Professional Survey"
+                      }
+                    },
+                    "Property": "Average Salary.1"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Average Salary By Job Title'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

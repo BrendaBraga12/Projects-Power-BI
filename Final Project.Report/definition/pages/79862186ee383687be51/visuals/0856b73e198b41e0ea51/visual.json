@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "0856b73e198b41e0ea51",
+  "position": {
+    "x": 0,
+    "y": 360,
+    "z": 4000,
+    "height": 360,
+    "width": 315.71428571428572,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data Professional Survey"
+                    }
+                  },
+                  "Property": "Q5 - Favorite Programming Language.1"
+                }
+              },
+              "queryRef": "Data Professional Survey.Q5 - Favorite Programming Language.1",
+              "nativeQueryRef": "Favorite Programming Language",
+              "active": true,
+              "displayName": "Favorite Programming Language"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Data Professional Survey"
+                    }
+                  },
+                  "Property": "Q1 - Which Title Best Fits your Current Role?.1"
+                }
+              },
+              "queryRef": "Data Professional Survey.Q1 - Which Title Best Fits your Current Role?.1",
+              "nativeQueryRef": "Job Title",
+              "displayName": "Job Title"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Data Professional Survey"
+                        }
+                      },
+                      "Property": "Unique ID"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Data Professional Survey.Unique ID)",
+              "nativeQueryRef": "Count of Voters",
+              "displayName": "Count of Voters"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Data Professional Survey"
+                      }
+                    },
+                    "Property": "Unique ID"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Favorite Programming Language'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
